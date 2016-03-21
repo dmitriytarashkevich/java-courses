@@ -62,7 +62,7 @@ public class InteractRunner {
                     UseResult = reader.next();
                 }
                 calc.cleanResult();
-                System.out.println("Exit: yes/no");
+                System.out.println("Exit: y/n");
                 exit = reader.next();
 
             }
