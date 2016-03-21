@@ -16,16 +16,16 @@ public class InteractRunner {
                 calc.add(Double.valueOf(a),b,Double.valueOf(c));
                 Double result = calc.getResult();
                 System.out.println("Result: " + result + "Use result: y/n");
-                String UseResult = reader.next();
+                UseResult = reader.next();
                 while (!UseResult.equals("n")) {
                     System.out.println("Enter operator: ");
-                    String b = reader.next();
+                    b = reader.next();
                     System.out.println("Enter second argument: ");
-                    String c = reader.next();
+                    c = reader.next();
                     calc.add(result,b,Double.valueOf(c));
-                    result = calc.getResult*();
+                    result = calc.getResult();
                     System.out.println("Result: " + result + "Use result: y/n");
-                    String UseResult = reader.next();
+                    UseResult = reader.next();
                 }
                 calc.cleanResult();
                 System.out.println("Exit: yes/no");
