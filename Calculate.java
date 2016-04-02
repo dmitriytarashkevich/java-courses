@@ -3,7 +3,7 @@ public class Calculate {
         double a = Double.valueOf(args[0]);
         double b = Double.valueOf(args[2]);
         double result = 0;
-        switch (args[1]) {
+        switch (args[0]) {
                 case "+":
                     result = a + b;
                     break;
