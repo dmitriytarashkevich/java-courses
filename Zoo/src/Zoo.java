@@ -1,4 +1,4 @@
-import com.zoo.animals.*;
+import animalsPackage.*;
 
 /**
  * Created by dmitr on 02.04.2016.

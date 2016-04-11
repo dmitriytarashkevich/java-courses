@@ -1,4 +1,4 @@
-package com.zoo.animals;
+package animalsPackage;
 
 /**
  * Created by dmitr on 02.04.2016.
