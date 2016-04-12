@@ -14,28 +14,49 @@ public class CalculatorEngine implements ActionListener {
  }
 
     double firstArg;
-    double summ;
+    double result;
+    String[] operations={"+","-","*","/","^"};
+    String operation;
 
  public void actionPerformed(ActionEvent e){
    // Get the source of this action
    JButton clickedButton =  (JButton) e.getSource();
    	
-   // Get the existing text from the Calculator�s
+   // Get the existing text from the Calculator's
    // display field. Reaching inside another object is bad.
    String dispFieldText = parent.getDisplayValue();
 
 
-   // Get the button's label 
+   // Calculating
    String clickedButtonLabel = clickedButton.getText();
      parent.setDisplayValue(dispFieldText + clickedButtonLabel);
-     if (clickedButtonLabel.equals("+")){
-         firstArg = Double.parseDouble(dispFieldText);
-         parent.setDisplayValue(null);
+     for (String a: operations) {
+         if (clickedButtonLabel.equals(a)){
+             operation=a;
+             firstArg = Double.parseDouble(dispFieldText);
+             parent.setDisplayValue(null);
+         }
      }
      if (clickedButtonLabel.equals("=")){
-         summ = firstArg + Double.parseDouble(dispFieldText);
-         parent.setDisplayValue(String.valueOf(summ));
+         double secondArg = Double.parseDouble(dispFieldText);
+         switch (operation){
+             case "+": result = firstArg + secondArg;
+                 break;
+             case "-": result = firstArg - secondArg;
+                 break;
+             case "*": result = firstArg * secondArg;
+                 break;
+             case "/": result = firstArg / secondArg;
+                 break;
+             case "^": result = Math.pow(firstArg,secondArg);
+                 break;
          }
+         parent.setDisplayValue(String.valueOf(result));
+         } else {
+         if (clickedButtonLabel.equals("Clear")) {
+             parent.setDisplayValue(null);
+         }
+     }
      }
  }
 

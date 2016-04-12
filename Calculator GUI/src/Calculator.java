@@ -20,6 +20,11 @@ public class Calculator {
 	JButton buttonPoint;
 	JButton buttonEqual;
     JButton buttonPlus;
+    JButton buttonMinus;
+    JButton buttonMultiply;
+    JButton buttonDivision;
+    JButton buttonInvolution;
+    JButton buttonClear;
 	JPanel p1;
 
     public void setDisplayValue(String val){
@@ -68,12 +73,17 @@ public class Calculator {
 	  buttonPoint = new JButton(".");
 	  buttonEqual=new JButton("=");
       buttonPlus=new JButton("+");
+      buttonMinus=new JButton("-");
+      buttonDivision=new JButton("/");
+      buttonMultiply=new JButton("*");
+      buttonInvolution=new JButton("^");
+      buttonClear = new JButton("Clear");
 
 	 // Create the panel with the GridLayout with 12 buttons – 
         //10 numeric ones, period, and the equal sign   
 
       p1 = new JPanel();
-      GridLayout gl =new GridLayout(4,4);
+      GridLayout gl =new GridLayout(6,3);
       p1.setLayout(gl);
 
 	 //  Add window controls to the panel p1
@@ -88,10 +98,15 @@ public class Calculator {
       p1.add(button9);
       p1.add(button0);
       p1.add(buttonPoint);
-      p1.add(buttonPlus);
       p1.add(buttonEqual);
-		  
-		  
+      p1.add(buttonPlus);
+      p1.add(buttonMinus);
+      p1.add(buttonMultiply);
+      p1.add(buttonDivision);
+      p1.add(buttonInvolution);
+      p1.add(buttonClear);
+
+
       CalculatorEngine calcEngine = new CalculatorEngine(this);
       button0.addActionListener(calcEngine);
       button1.addActionListener(calcEngine);
@@ -106,7 +121,11 @@ public class Calculator {
       buttonPoint.addActionListener(calcEngine);
       buttonPlus.addActionListener(calcEngine);
       buttonEqual.addActionListener(calcEngine);
-
+      buttonMinus.addActionListener(calcEngine);
+      buttonMultiply.addActionListener(calcEngine);
+      buttonDivision.addActionListener(calcEngine);
+      buttonInvolution.addActionListener(calcEngine);
+      buttonClear.addActionListener(calcEngine);
 
 
 	// Add the panel p1 to the center of the window				          
