@@ -3,11 +3,11 @@
  */
 public class TooLongTextAnalyzer implements TextAnalyzer {
 
-    TooLongTextAnalyzer(int maxLength){
+    public TooLongTextAnalyzer(int maxLength){
         this.maxLength=maxLength;
     }
 
-    int maxLength;
+    private int maxLength;
 
     @Override
     public Label processText(String text) {

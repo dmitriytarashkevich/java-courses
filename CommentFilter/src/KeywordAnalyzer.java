@@ -3,9 +3,9 @@
  */
 public abstract class KeywordAnalyzer implements TextAnalyzer {
 
-    abstract String[] getKeywords();
+    protected abstract String[] getKeywords();
 
-    abstract Label getLabel();
+    protected abstract Label getLabel();
 
     @Override
     public Label processText(String text) {

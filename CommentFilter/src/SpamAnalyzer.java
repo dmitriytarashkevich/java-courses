@@ -2,17 +2,17 @@
  * Created by dmitr on 29.04.2016.
  */
 public class SpamAnalyzer extends KeywordAnalyzer{
-    String [] keywords;
+    private String [] keywords;
     SpamAnalyzer(String[] keywords){
-        this.keywords =keywords;
+        this.keywords = keywords;
     }
     @Override
-    String[] getKeywords() {
+    protected String[] getKeywords() {
         return this.keywords;
     }
 
     @Override
-    Label getLabel() {
+    protected Label getLabel() {
         return Label.SPAM;
     }
 }
