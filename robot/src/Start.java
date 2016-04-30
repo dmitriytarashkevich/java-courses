@@ -3,7 +3,7 @@
  */
 public class Start {
     public static void main(String[] args) {
-        Robot robot = new Robot(5,6,Direction.LEFT,7,10);
+        Robot robot = new Robot(3,100,Direction.LEFT,7,10);
         System.out.println("Я тут: " + robot.getX() + " " + robot.getY());
         String s = null;
         switch (robot.getDirection()){

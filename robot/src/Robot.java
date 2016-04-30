@@ -9,8 +9,8 @@ public class Robot {
         this.y=y;
         this.direction=direction;
     }
-    int x;
-    int y;
+    private int x;
+    private int y;
     Direction direction;
     int toX;
     int toY;
@@ -19,11 +19,11 @@ public class Robot {
         return direction;
     }
 
-    public int getX() {
+    public final int getX() {
         return x;
     }
 
-    public int getY() {
+    public final int getY() {
         return y;
     }
 
