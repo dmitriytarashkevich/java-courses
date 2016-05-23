@@ -5,17 +5,17 @@ public class Comment {
     public static void main(String[] args) {
         TextAnalyzer b = new SpamAnalyzer(new String[] {"first","second"});
         TextAnalyzer a = new NegativeTextAnalyzer();
-        TextAnalyzer c = new TooLongTextAnalyzer(40);
-        System.out.println(checkLabels(new TextAnalyzer[]{a, b, c}, "this is =( first test, and it is spam"));
+        TextAnalyzer c = new TooLongTextAnalyzer(10);
+        System.out.println(checkLabels(new TextAnalyzer[]{a, b, c}, "it's long and sad second spam :("));
     }
-    //order of result SIGNS depends on order of incoming analyzers
-    /*
-     public static String checkLabels(TextAnalyzer[] analyzers, String text){
-        String returnable = Label.OK.name();
+    //order of result SIGNS depends on order of incoming analyzers (and it is right for stepic.org)
+
+     /*public static Label checkLabels(TextAnalyzer[] analyzers, String text){
+        Label returnable = Label.OK;
         for (TextAnalyzer a: analyzers
              ) {
             if (a.processText(text)!=(Label.OK)){
-                returnable = a.processText(text).name();
+                returnable = a.processText(text);
                 break;
             }
         }
@@ -23,7 +23,7 @@ public class Comment {
     }
      */
     // order of result SIGNS: SPAM->NEGATIVE_TEXT->TOO_LONG
-    public static String checkLabels(TextAnalyzer[] analyzers, String text){
+    public static Label checkLabels(TextAnalyzer[] analyzers, String text){
         Label returnable = Label.OK;
         for (TextAnalyzer a: analyzers
              ) {
@@ -42,6 +42,6 @@ public class Comment {
                 }
             }
         }
-        return returnable.toString();
+        return returnable;
     }
 }
