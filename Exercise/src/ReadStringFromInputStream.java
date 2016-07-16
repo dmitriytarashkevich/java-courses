@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 
 // метод, который зачитает данные из InputStream и преобразует их в строку, используя заданную кодировку.
 
-public class Main {
+public class ReadStringFromInputStream {
     public static void main(String[] args) throws IOException {
         InputStream inputStream = new ByteArrayInputStream(new byte[] { 48,49,50,51});
         Charset charset = StandardCharsets.US_ASCII;

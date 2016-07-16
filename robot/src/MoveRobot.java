@@ -2,7 +2,7 @@
  * Created by dmitr on 26.04.2016.
  */
 public class MoveRobot{
-    public static void moveRobot(Robot robot, int toX, int toY) {
+    public  static void moveRobot(Robot robot, int toX, int toY) {
         int dx = toX - robot.getX();
         int dy = toY - robot.getY();
         if (dy >= 0 && dx >= 0) {

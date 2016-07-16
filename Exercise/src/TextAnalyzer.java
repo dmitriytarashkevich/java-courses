@@ -17,7 +17,7 @@ public class TextAnalyzer {
         (word -> //give every word to consumer
                 table.merge(word.toLowerCase() // check word for presence a value(number of word's repetitions)
                 , INITIAL_NUMBER_OF_WORDS // give 1 if key(word) hadn't value
-                , (currentValue,newValue)-> currentValue+newValue)); // gives a sum of different values for same keys
+                , (currentValue,newValue)-> currentValue+newValue)); // gives a frequency of different values for same keys
         table.entrySet().stream()
                 .sorted(Comparator //sorting
                         .<Map.Entry<String,Integer>>comparingInt(Map.Entry::getValue) // ascending compare by NUMBER
