@@ -26,7 +26,7 @@ public class PointsOnSegments {
         points.forEach(System.out::println);
     }
 }
-class Segment{
+class  Segment{
     public int start;
     public int end;
 
