@@ -18,63 +18,30 @@ import java.io.*;
 
 public class Main {
     public static void main(String[] args) throws IOException{
-        InputStream stream = new ByteArrayInputStream( new byte[] {13,10,13});
-        boolean r = false;
-        int read = stream.read();
-        while (read!=(-1)) {
-            if ((read == 13) && (r == false)) {
-                r = true;
-                read = stream.read();
-            } else {
-                if ((read == 10) && (r == true)) {
-                    System.out.println(10);
-                    r = false;
-                    read = stream.read();
-                } else {
-                    if ((r == true) && (read != 13)) {
-                        r = false;
-                        System.out.println(13);
-                        System.out.println(read);
-                        read = stream.read();
-                    } else {
-                        System.out.println(read);
-                        read = stream.read();
-                    }
-                }
-            }
+        InputStream stream = new ByteArrayInputStream( new byte[] {13,10,10,13,10,13});
+        replaceLineSeparator(stream);
+    }
+
+    private static void replaceLineSeparator(InputStream stream) throws IOException {
+        int prev = stream.read();
+        if (prev == -1) return; //empty stream -> exit
+        int curr = stream.read();
+        while (curr != -1) {
+//            if (prev == 13 && curr == 10) {
+//                prev = 10; //"previous" becomes 10 and is going to be written in else-block
+//                curr = stream.read();
+//            } else {
+//                System.out.write(prev);
+//                prev = curr;
+//                curr = stream.read();
+//            }
+            // this part of code may be simplified
+            // because if-block differs from else-block only in writing prev in else-block
+            if (prev != 13 || curr != 10) System.out.write(prev);
+            prev = curr;
+            curr = stream.read();
         }
-        if (r == true){System.out.println(13);}
+        System.out.write(prev); // write last
         System.out.flush();
     }
 }
-
-/*class Main {
-    public static void main(String[] args) throws IOException{
-        boolean r = false;
-        int read = System.in.read();
-        while (read!=(-1)) {
-            if ((read == 13) && (r == false)) {
-                r = true;
-                read = System.in.read();
-            } else {
-                if ((read == 10) && (r == true)) {
-                    System.out.write(10);
-                    r = false;
-                    read = System.in.read();
-                } else {
-                    if ((r == true) && (read != 13)) {
-                        r = false;
-                        System.out.write(13);
-                        System.out.write(read);
-                        read = System.in.read();
-                    } else {
-                        System.out.write(read);
-                        read = System.in.read();
-                    }
-                }
-            }
-        }
-        if (r == true){System.out.write(13);}
-        System.out.flush();
-    }
-} */

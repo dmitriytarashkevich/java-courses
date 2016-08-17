@@ -27,7 +27,4 @@ public class UntrustworthyMailWorker implements MailService {
         }
         return this.realMailService.processMail(thirdFaceResult);
     }
-    public  RealMailService getRealMailService(){
-        return realMailService;
-    }
 }

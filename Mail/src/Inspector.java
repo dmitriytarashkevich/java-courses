@@ -15,7 +15,7 @@ public class Inspector implements MailService {
         if (mail instanceof MailPackage){
             MailPackage mailP = ((MailPackage) mail);
             if (mailP.getContent().getContent().contains("weapons") || mailP.getContent().getContent().contains("banned substance")){
-                throw new IllegalPackageException();
+                throw new IllegalPackageException() ;
             } else {
                 if (mailP.getContent().getContent().contains("stones")){
                     throw new StolenPackageException();
@@ -24,10 +24,10 @@ public class Inspector implements MailService {
         }
         return mail;
     }
-}
-class IllegalPackageException extends RuntimeException {
-    IllegalPackageException(){}
-}
-class StolenPackageException extends RuntimeException {
-    StolenPackageException(){}
+    class IllegalPackageException extends RuntimeException {
+        IllegalPackageException(){}
+    }
+    class StolenPackageException extends RuntimeException {
+        StolenPackageException(){}
+    }
 }
