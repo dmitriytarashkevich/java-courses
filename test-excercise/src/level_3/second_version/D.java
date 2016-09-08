@@ -1,6 +1,6 @@
 package level_3.second_version;
 
-public interface DBehavior extends BBehavior {
+public interface D extends B {
     default void showD(){
         System.out.print("D ");
     };
