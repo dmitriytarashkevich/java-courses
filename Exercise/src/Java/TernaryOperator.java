@@ -18,7 +18,7 @@ import java.util.function.Predicate;
 /**
  * Created by Dmitry Tarashkevich on 21.05.2016.
  */
-public class FunctionalInterface {
+public class TernaryOperator {
     public static <T, U> Function<T, U> ternaryOperator(
             Predicate<? super T> condition,
             Function<? super T, ? extends U> ifTrue,

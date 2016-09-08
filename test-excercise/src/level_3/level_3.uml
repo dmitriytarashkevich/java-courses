@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>level_3.classes.A</OriginalElement>
+  <nodes>
+    <node x="613.0" y="102.0">level_3.classes.A</node>
+    <node x="129.35416666666663" y="0.0">level_3.interfaces.BBehavior</node>
+    <node x="115.625" y="204.0">level_3.classes.D</node>
+    <node x="212.60416666666666" y="102.0">level_3.interfaces.DBehavior</node>
+    <node x="529.6041666666666" y="0.0">level_3.interfaces.ABehavior</node>
+    <node x="0.0" y="102.0">level_3.classes.B</node>
+    <node x="314.125" y="306.0">level_3.Main</node>
+    <node x="496.625" y="204.0">level_3.classes.C</node>
+    <node x="306.625" y="204.0">level_3.classes.X</node>
+    <node x="445.60416666666663" y="102.0">level_3.interfaces.CBehavior</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="level_3.Main" target="level_3.classes.B">
+      <point x="-62.0" y="-26.0" />
+      <point x="329.625" y="286.0" />
+      <point x="85.0" y="286.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="level_3.classes.A" target="level_3.interfaces.ABehavior">
+      <point x="0.0" y="-26.0" />
+      <point x="698.5" y="77.0" />
+      <point x="623.3541666666666" y="77.0" />
+      <point x="31.25" y="26.0" />
+    </edge>
+    <edge source="level_3.interfaces.CBehavior" target="level_3.interfaces.ABehavior">
+      <point x="0.0" y="-26.0" />
+      <point x="508.10416666666663" y="77.0" />
+      <point x="560.8541666666666" y="77.0" />
+      <point x="-31.25" y="26.0" />
+    </edge>
+    <edge source="level_3.Main" target="level_3.classes.A">
+      <point x="62.0" y="-26.0" />
+      <point x="453.625" y="286.0" />
+      <point x="698.5" y="286.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="level_3.Main" target="level_3.classes.D">
+      <point x="-31.0" y="-26.0" />
+      <point x="360.625" y="276.0" />
+      <point x="201.125" y="276.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="level_3.Main" target="level_3.classes.C">
+      <point x="31.0" y="-26.0" />
+      <point x="422.625" y="276.0" />
+      <point x="582.125" y="276.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="level_3.classes.B" target="level_3.interfaces.BBehavior">
+      <point x="0.0" y="-26.0" />
+      <point x="85.0" y="77.0" />
+      <point x="160.35416666666663" y="77.0" />
+      <point x="-31.0" y="26.0" />
+    </edge>
+    <edge source="level_3.classes.X" target="level_3.interfaces.DBehavior">
+      <point x="-42.5" y="-26.0" />
+      <point x="349.125" y="179.0" />
+      <point x="306.35416666666663" y="179.0" />
+      <point x="31.25" y="26.0" />
+    </edge>
+    <edge source="level_3.Main" target="level_3.classes.X">
+      <point x="0.0" y="-26.0" />
+      <point x="0.0" y="26.0" />
+    </edge>
+    <edge source="level_3.classes.X" target="level_3.interfaces.CBehavior">
+      <point x="42.5" y="-26.0" />
+      <point x="434.125" y="179.0" />
+      <point x="476.85416666666663" y="179.0" />
+      <point x="-31.25" y="26.0" />
+    </edge>
+    <edge source="level_3.classes.C" target="level_3.interfaces.CBehavior">
+      <point x="0.0" y="-26.0" />
+      <point x="582.125" y="179.0" />
+      <point x="539.3541666666666" y="179.0" />
+      <point x="31.25" y="26.0" />
+    </edge>
+    <edge source="level_3.classes.D" target="level_3.interfaces.DBehavior">
+      <point x="0.0" y="-26.0" />
+      <point x="201.125" y="179.0" />
+      <point x="243.85416666666666" y="179.0" />
+      <point x="-31.25" y="26.0" />
+    </edge>
+    <edge source="level_3.interfaces.DBehavior" target="level_3.interfaces.BBehavior">
+      <point x="0.0" y="-26.0" />
+      <point x="275.10416666666663" y="77.0" />
+      <point x="222.35416666666663" y="77.0" />
+      <point x="31.0" y="26.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="392.0" y="179.0" />
+  <SelectedNodes>
+    <node>level_3.Main</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
