@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/5a24aa6bd3.js"></script>
+    <title>Title</title>
+    <style>
+        .modal-footer,.modal-content{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Modal Example</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-sm">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <ul class="nav nav-tabs nav-justified">
+                        <li><a data-toggle="tab" href="#signin">Войти</a></li>
+                        <li class="active"><a data-toggle="tab" href="#signup">Регистрация</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="signin" class="tab-pane fade ">
+                            <form>
+                                <div class="form-group">
+                                    <label for="email">Логин</label>
+                                    <input type="email" class="form-control" id="login" placeholder="Введите логин">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Пароль</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Введите пароль">
+                                </div>
+                                <div class="checkbox">
+                                    <label><input type="checkbox"> Запомнить меня</label>
+                                </div>
+                                <button type="submit" class="btn btn-default">Войти</button>
+                            </form>
+                        </div>
+                        <div id="signup" class="tab-pane fade in active">
+                            <form>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Введите email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Пароль</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Введите пароль">
+                                </div>
+                                <button type="submit" class="btn btn-default">Регистрация</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>или войти с помощью</p>
+                    <button class="btn btn-social-icon btn-vk"><i class="fa fa-vk"></i></button>
+                    <button class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></button>
+                    <button class="btn btn-social-icon btn-odnoklassniki"><i class="fa fa-odnoklassniki"></i></button>
+                    <button class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
