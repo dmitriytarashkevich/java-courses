@@ -7,19 +7,59 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/5a24aa6bd3.js"></script>
-    <title>Title</title>
+    <title>Level 1</title>
     <style>
-        .modal-footer,.modal-content{
+        .modal-footer, .modal-content{
+            background-color: #2E3192;
+            color: #ffffff;
             text-align: center;
+            border: none;
+        }
+        .btn{
+            color: white !important;
+        }
+        .btn-lg {
+            border: 1px solid #ffffff;
+            background-color: #43469D;
+            margin-top: 5%;
+        }
+        .btn-social-icon{
+            border: 2px solid #ffffff;
+            background-color: transparent;
+        }
+
+        .form-group{
+            margin-top: 5%;
+        }
+        .nav-tabs > li > a{
+            background-color:#262A76;
+            color: white !important;
+            border: none !important;
+        }
+        .nav-tabs > li.active > a,
+        .nav-tabs > li.active > a:hover,
+        .nav-tabs > li.active > a:focus {
+            background-color:#2E3192;
+        }
+        input, textarea{
+            background-color: #43469D !important;
+            color: white !important;
+            border: none !important;
+        }
+        @media (max-width: 768px) {
+            .nav-justified > li {
+                display: table-cell;
+                width: 1%;
+            }
         }
     </style>
 </head>
 <body>
+<div class="container-fluent" align="center">
+    <h2>Let's start!</h2>
 
-<div class="container">
-    <h2>Modal Example</h2>
     <!-- Trigger the modal with a button -->
-    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -27,57 +67,59 @@
 
             <!-- Modal content-->
             <div class="modal-content">
+
+                <!--Tabs-->
                 <div class="modal-body">
                     <ul class="nav nav-tabs nav-justified">
                         <li><a data-toggle="tab" href="#signin">Войти</a></li>
                         <li class="active"><a data-toggle="tab" href="#signup">Регистрация</a></li>
                     </ul>
 
+                    <!--Tab content-->
                     <div class="tab-content">
                         <div id="signin" class="tab-pane fade ">
                             <form>
                                 <div class="form-group">
-                                    <label for="email">Логин</label>
-                                    <input type="email" class="form-control" id="login" placeholder="Введите логин">
+                                    <label for="login"><h3>Логин</h3></label>
+                                    <input type="text" class="form-control" id="login" placeholder="Введите логин">
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd">Пароль</label>
+                                    <label for="pwd"><h3>Пароль</h3></label>
                                     <input type="password" class="form-control" id="pwd" placeholder="Введите пароль">
                                 </div>
                                 <div class="checkbox">
                                     <label><input type="checkbox"> Запомнить меня</label>
                                 </div>
-                                <button type="submit" class="btn btn-default">Войти</button>
+                                <button type="submit" class="btn btn-lg">Войти</button>
                             </form>
                         </div>
                         <div id="signup" class="tab-pane fade in active">
                             <form>
                                 <div class="form-group">
-                                    <label for="email">Email</label>
+                                    <label for="email"><h3>Email</h3></label>
                                     <input type="email" class="form-control" id="email" placeholder="Введите email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwd">Пароль</label>
+                                    <label for="pwd"><h3>Пароль</h3></label>
                                     <input type="password" class="form-control" id="pwd" placeholder="Введите пароль">
                                 </div>
-                                <button type="submit" class="btn btn-default">Регистрация</button>
+                                <button type="submit" class="btn btn-lg">Зарегистрироваться</button>
                             </form>
                         </div>
                     </div>
                 </div>
+
+                <!--Social buttons-->
                 <div class="modal-footer">
                     <p>или войти с помощью</p>
-                    <button class="btn btn-social-icon btn-vk"><i class="fa fa-vk"></i></button>
+                    <button class="btn btn-outline-primary btn-social-icon btn-vk"><i class="fa fa-vk"></i></button>
                     <button class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></button>
                     <button class="btn btn-social-icon btn-odnoklassniki"><i class="fa fa-odnoklassniki"></i></button>
                     <button class="btn btn-social-icon btn-google-plus"><i class="fa fa-google-plus"></i></button>
                 </div>
             </div>
-
         </div>
     </div>
-
 </div>
-
 </body>
 </html>
