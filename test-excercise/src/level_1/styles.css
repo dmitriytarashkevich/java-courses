@@ -1,0 +1,43 @@
+.modal-footer, .modal-content{
+    background-color: #2E3192;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+}
+.btn{
+    color: white !important;
+}
+.btn-lg {
+    border: 1px solid #ffffff;
+    background-color: #43469D;
+    margin-top: 5%;
+}
+.btn-social-icon{
+    border: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+.form-group{
+    margin-top: 5%;
+}
+.nav-tabs > li > a{
+    background-color:#262A76;
+    color: white !important;
+    border: none !important;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    background-color:#2E3192;
+}
+input, textarea{
+    background-color: #43469D !important;
+    color: white !important;
+    border: none !important;
+}
+@media (max-width: 768px) {
+    .nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+}
