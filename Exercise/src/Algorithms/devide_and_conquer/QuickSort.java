@@ -107,7 +107,7 @@ public class QuickSort {
         swap(a, l, k = new Random().nextInt(r - l + 1) + l);
         int pivot = a[l], j = l, h = j;
 
-        //1 проход для ахуенных
+        //1 проход для молодцов
         for (int i = l + 1; i <= r; i++) {
             if (a[i] == pivot) {
                 j++;
